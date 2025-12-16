@@ -1,0 +1,23 @@
+{
+  "name": "action-download-artifact",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build main.js -o dist --source-map"
+  },
+  "author": "step-security",
+  "license": "MIT",
+  "keywords": [
+    "action",
+    "download",
+    "artifact",
+    "github-action"
+  ],
+  "dependencies": {
+    "@actions/artifact": "^2.1.11",
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "adm-zip": "^0.5.16",
+    "axios": "^1.13.2",
+    "filesize": "^9.0.11"
+  }
+}
