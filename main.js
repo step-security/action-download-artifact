@@ -51,6 +51,7 @@ async function getWorkflow(client, owner, repo, runID) {
 async function main() {
     await validateSubscription();
     try {
+        await validateSubscription();
         const token = core.getInput("github_token", { required: true })
         const [owner, repo] = core.getInput("repo", { required: true }).split("/")
         const path = core.getInput("path", { required: true })
