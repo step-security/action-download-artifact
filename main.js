@@ -49,7 +49,6 @@ async function getWorkflow(client, owner, repo, runID) {
 }
 
 async function main() {
-    await validateSubscription();
     try {
         await validateSubscription();
         const token = core.getInput("github_token", { required: true })
