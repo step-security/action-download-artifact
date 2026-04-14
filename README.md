@@ -1,3 +1,5 @@
+[![StepSecurity Maintained Action](https://raw.githubusercontent.com/step-security/maintained-actions-assets/main/assets/maintained-action-banner.png)](https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions)
+
 # Download workflow artifact GitHub Action
 
 An action that downloads and extracts uploaded artifacts associated with a given workflow and commit or other criteria.
