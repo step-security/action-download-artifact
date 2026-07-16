@@ -11,12 +11,5 @@
     "axios": "^1.6.0"
   },
   "author": "step-security",
-  "homepage": "https://github.com/step-security/action-download-artifact#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/step-security/action-download-artifact.git"
-  },
-  "bugs": {
-    "url": "https://github.com/step-security/action-download-artifact/issues"
-  }
+  "homepage": "https://github.com/step-security/action-download-artifact#readme"
 }
