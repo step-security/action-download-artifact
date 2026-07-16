@@ -108451,7 +108451,7 @@ If the error persists, please check whether Actions and API requests are operati
 var client = new DefaultArtifactClient();
 
 // main.js
-var import_adm_zip = __toESM(require_adm_zip(), 1);
+var import_adm_zip = __toESM(require_adm_zip());
 
 // node_modules/filesize/dist/filesize.js
 var INVALID_NUMBER = "Invalid number";
@@ -108865,8 +108865,8 @@ function filesize(arg, {
 }
 
 // main.js
-var import_node_path = __toESM(require("node:path"), 1);
-var import_node_fs2 = __toESM(require("node:fs"), 1);
+var import_node_path = __toESM(require("node:path"));
+var import_node_fs2 = __toESM(require("node:fs"));
 
 // node_modules/axios/lib/helpers/bind.js
 function bind2(fn, thisArg) {
