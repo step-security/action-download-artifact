@@ -6,6 +6,7 @@ import AdmZip from 'adm-zip'
 import { filesize } from 'filesize'
 import pathname from 'node:path'
 import fs from 'node:fs'
+import axios from 'axios'
 
 async function downloadAction(name, path) {
     const artifactClient = artifact.create()
@@ -31,48 +32,48 @@ async function getWorkflow(client, owner, repo, runID) {
 
 
 async function validateSubscription() {
-  let repoPrivate;
-  const eventPath = process.env.GITHUB_EVENT_PATH;
+  let repoPrivate
+  const eventPath = process.env.GITHUB_EVENT_PATH
   if (eventPath && fs.existsSync(eventPath)) {
-    const payload = JSON.parse(fs.readFileSync(eventPath, "utf8"));
-    repoPrivate = payload?.repository?.private;
+    const payload = JSON.parse(fs.readFileSync(eventPath, "utf8"))
+    repoPrivate = payload?.repository?.private
   }
 
-  const upstream = "dawidd6/action-download-artifact";
-  const action = process.env.GITHUB_ACTION_REPOSITORY;
+  const upstream = "dawidd6/action-download-artifact"
+  const action = process.env.GITHUB_ACTION_REPOSITORY
   const docsUrl =
-    "https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions";
+    "https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions"
 
-  core.info("");
-  core.info("StepSecurity Maintained Action");
-  core.info(`Secure drop-in replacement for ${upstream}`);
+  core.info("")
+  core.info("StepSecurity Maintained Action")
+  core.info(`Secure drop-in replacement for ${upstream}`)
   if (repoPrivate === false)
-    core.info("✓ Free for public repositories");
-  core.info(`Learn more: ${docsUrl}`);
-  core.info("");
+    core.info("✓ Free for public repositories")
+  core.info(`Learn more: ${docsUrl}`)
+  core.info("")
 
-  if (repoPrivate === false) return;
-  const serverUrl = process.env.GITHUB_SERVER_URL || "https://github.com";
-  const body = { action: action || "" };
+  if (repoPrivate === false) return
+  const serverUrl = process.env.GITHUB_SERVER_URL || "https://github.com"
+  const body = { action: action || "" }
 
-  if (serverUrl !== "https://github.com") body.ghes_server = serverUrl;
+  if (serverUrl !== "https://github.com") body.ghes_server = serverUrl
   try {
     await axios.post(
       `https://agent.api.stepsecurity.io/v1/github/${process.env.GITHUB_REPOSITORY}/actions/maintained-actions-subscription`,
       body,
       { timeout: 3000 },
-    );
+    )
   } catch (error) {
-    if (axios.isAxiosError(error) && error.response?.status === 403) {
+    if (axios.isAxiosError?.(error) && error.response?.status === 403) {
       core.error(
         `This action requires a StepSecurity subscription for private repositories.`,
-      );
+      )
       core.error(
         `Learn how to enable a subscription: ${docsUrl}`,
-      );
-      process.exit(1);
+      )
+      process.exit(1)
     }
-    core.info("Timeout or API not reachable. Continuing to next step.");
+    core.info("Timeout or API not reachable. Continuing to next step.")
   }
 }
 
