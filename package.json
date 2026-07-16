@@ -1,26 +1,22 @@
 {
   "name": "action-download-artifact",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "ncc build main.js -o dist --source-map"
+  "type": "module",
+  "main": "main.js",
+  "dependencies": {
+    "@actions/artifact": "^6.2.1",
+    "@actions/core": "^3.0.1",
+    "@actions/github": "^9.1.1",
+    "adm-zip": "^0.5.17",
+    "filesize": "^11.0.17",
+    "axios": "^1.6.0"
   },
   "author": "step-security",
-  "license": "MIT",
-  "keywords": [
-    "action",
-    "download",
-    "artifact",
-    "github-action"
-  ],
-  "dependencies": {
-    "@actions/artifact": "^5.0.1",
-    "@actions/core": "^2.0.1",
-    "@actions/github": "^6.0.0",
-    "adm-zip": "^0.5.16",
-    "axios": "^1.13.2",
-    "filesize": "^11.0.13"
+  "homepage": "https://github.com/step-security/action-download-artifact#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-security/action-download-artifact.git"
   },
-  "devDependencies": {
-    "@vercel/ncc": "^0.38.4"
+  "bugs": {
+    "url": "https://github.com/step-security/action-download-artifact/issues"
   }
 }
