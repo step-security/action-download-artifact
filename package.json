@@ -1,6 +1,7 @@
 {
   "name": "action-download-artifact",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "build": "ncc build main.js -o dist --source-map"
   },

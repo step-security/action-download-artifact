@@ -1,11 +1,10 @@
-exports.id = 835;
-exports.ids = [835];
-exports.modules = {
+export const id = 835;
+export const ids = [835];
+export const modules = {
 
 /***/ 7071:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Builder = void 0;
@@ -551,7 +550,6 @@ exports.Builder = Builder;
 /***/ 4503:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ByteBuffer = void 0;
@@ -816,7 +814,6 @@ exports.ByteBuffer = ByteBuffer;
 /***/ 2957:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SIZE_PREFIX_LENGTH = exports.FILE_IDENTIFIER_LENGTH = exports.SIZEOF_INT = exports.SIZEOF_SHORT = void 0;
@@ -831,7 +828,6 @@ exports.SIZE_PREFIX_LENGTH = 4;
 /***/ 2631:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Encoding = void 0;
@@ -847,7 +843,6 @@ var Encoding;
 /***/ 6558:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 var __webpack_unused_export__;
 
 __webpack_unused_export__ = ({ value: true });
@@ -875,7 +870,6 @@ __webpack_unused_export__ = ({ enumerable: true, get: function () { return encod
 /***/ 8321:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isLittleEndian = exports.float64 = exports.float32 = exports.int32 = void 0;
@@ -1348,7 +1342,6 @@ var __rewriteRelativeImportExtension;
 /***/ 4216:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -17233,5 +17226,5 @@ RecordBatchWriter['throughNode'] = recordBatchWriterThroughNodeStream;
 /***/ })
 
 };
-;
+
 //# sourceMappingURL=835.index.js.map
