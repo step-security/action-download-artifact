@@ -4,7 +4,7 @@
 
 An action that downloads and extracts uploaded artifacts associated with a given workflow and commit or other criteria.
 
-Let's suppose you have a workflow with a job in it that at the end uploads an artifact using `actions/upload-artifact` action and you want to download this artifact in another workflow that is run after the first one. Official `actions/download-artifact` does not allow this. That's why we decided to create this action. By knowing only the workflow name and commit SHA or other details, you can download the previously uploaded artifact from different workflow associated with that commit or other criteria and use it.
+Official [`actions/download-artifact`](https://github.com/actions/download-artifact#download-artifacts-from-other-workflow-runs-or-repositories) can download from another workflow run when its exact run ID is known. This action can also find a run by workflow, commit, branch, tag, pull request or other criteria and download its artifacts.
 
 ## Usage
 
@@ -15,7 +15,7 @@ Let's suppose you have a workflow with a job in it that at the end uploads an ar
 ```yaml
 - name: Download artifact
   id: download-artifact
-  uses: step-security/action-download-artifact@v11
+  uses: step-security/action-download-artifact@v26
   with:
     # Optional, GitHub token, a Personal Access Token with `public_repo` scope if needed
     # Required, if the artifact is from a different repo
@@ -90,3 +90,9 @@ Let's suppose you have a workflow with a job in it that at the end uploads an ar
     # default false
     merge_multiple: false
 ```
+
+On GitHub Enterprise Server, use `use_unzip: true` for large artifacts so extraction does not load the complete ZIP into memory.
+
+### API usage
+
+Workflow, branch, event and commit/ref filters are sent to GitHub's API. `workflow_conclusion`, `run_number`, fork filtering, `check_artifacts` and `search_artifacts` are evaluated by this action; artifact checks may require an additional paginated API request for every candidate workflow run. Expired artifacts do not satisfy `check_artifacts` or `search_artifacts`, so runs whose artifacts are gone are skipped. Candidate runs are sorted newest first by this action rather than relying on the order the API returns them in.
