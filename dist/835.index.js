@@ -2,14 +2,14 @@ export const id = 835;
 export const ids = [835];
 export const modules = {
 
-/***/ 7071:
+/***/ 87071:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Builder = void 0;
-const byte_buffer_js_1 = __webpack_require__(4503);
-const constants_js_1 = __webpack_require__(2957);
+const byte_buffer_js_1 = __webpack_require__(84503);
+const constants_js_1 = __webpack_require__(32957);
 class Builder {
     /**
      * Create a FlatBufferBuilder.
@@ -547,15 +547,15 @@ exports.Builder = Builder;
 
 /***/ }),
 
-/***/ 4503:
+/***/ 84503:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ByteBuffer = void 0;
-const constants_js_1 = __webpack_require__(2957);
-const encoding_js_1 = __webpack_require__(2631);
-const utils_js_1 = __webpack_require__(8321);
+const constants_js_1 = __webpack_require__(32957);
+const encoding_js_1 = __webpack_require__(92631);
+const utils_js_1 = __webpack_require__(78321);
 class ByteBuffer {
     /**
      * Create a new ByteBuffer with a given array of bytes (`Uint8Array`)
@@ -811,7 +811,7 @@ exports.ByteBuffer = ByteBuffer;
 
 /***/ }),
 
-/***/ 2957:
+/***/ 32957:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -825,7 +825,7 @@ exports.SIZE_PREFIX_LENGTH = 4;
 
 /***/ }),
 
-/***/ 2631:
+/***/ 92631:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -840,34 +840,34 @@ var Encoding;
 
 /***/ }),
 
-/***/ 6558:
+/***/ 96558:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var __webpack_unused_export__;
 
 __webpack_unused_export__ = ({ value: true });
 __webpack_unused_export__ = exports.$F = exports.M$ = __webpack_unused_export__ = __webpack_unused_export__ = __webpack_unused_export__ = __webpack_unused_export__ = exports.kc = __webpack_unused_export__ = __webpack_unused_export__ = __webpack_unused_export__ = void 0;
-var constants_js_1 = __webpack_require__(2957);
+var constants_js_1 = __webpack_require__(32957);
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return constants_js_1.FILE_IDENTIFIER_LENGTH; } });
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return constants_js_1.SIZEOF_INT; } });
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return constants_js_1.SIZEOF_SHORT; } });
 Object.defineProperty(exports, "kc", ({ enumerable: true, get: function () { return constants_js_1.SIZE_PREFIX_LENGTH; } }));
-var utils_js_1 = __webpack_require__(8321);
+var utils_js_1 = __webpack_require__(78321);
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return utils_js_1.float32; } });
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return utils_js_1.float64; } });
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return utils_js_1.int32; } });
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return utils_js_1.isLittleEndian; } });
-var builder_js_1 = __webpack_require__(7071);
+var builder_js_1 = __webpack_require__(87071);
 Object.defineProperty(exports, "M$", ({ enumerable: true, get: function () { return builder_js_1.Builder; } }));
-var byte_buffer_js_1 = __webpack_require__(4503);
+var byte_buffer_js_1 = __webpack_require__(84503);
 Object.defineProperty(exports, "$F", ({ enumerable: true, get: function () { return byte_buffer_js_1.ByteBuffer; } }));
-var encoding_js_1 = __webpack_require__(2631);
+var encoding_js_1 = __webpack_require__(92631);
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return encoding_js_1.Encoding; } });
 
 
 /***/ }),
 
-/***/ 8321:
+/***/ 78321:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -881,7 +881,7 @@ exports.isLittleEndian = new Uint16Array(new Uint8Array([1, 0]).buffer)[0] === 1
 
 /***/ }),
 
-/***/ 1860:
+/***/ 61860:
 /***/ ((module) => {
 
 /******************************************************************************
@@ -1339,7 +1339,7 @@ var __rewriteRelativeImportExtension;
 
 /***/ }),
 
-/***/ 4216:
+/***/ 91835:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 
@@ -1351,7 +1351,7 @@ __webpack_require__.d(__webpack_exports__, {
 // UNUSED EXPORTS: AsyncByteQueue, AsyncByteStream, AsyncMessageReader, AsyncRecordBatchFileReader, AsyncRecordBatchStreamReader, Binary, BinaryBuilder, BinaryView, BinaryViewBuilder, Bool, BoolBuilder, BufferType, Builder, ByteStream, CompressionType, Data, DataType, DateBuilder, DateDay, DateDayBuilder, DateMillisecond, DateMillisecondBuilder, DateUnit, Date_, Decimal, DecimalBuilder, DenseUnion, DenseUnionBuilder, Dictionary, DictionaryBuilder, Duration, DurationBuilder, DurationMicrosecond, DurationMicrosecondBuilder, DurationMillisecond, DurationMillisecondBuilder, DurationNanosecond, DurationNanosecondBuilder, DurationSecond, DurationSecondBuilder, Field, FixedSizeBinary, FixedSizeBinaryBuilder, FixedSizeList, FixedSizeListBuilder, Float, Float16, Float16Builder, Float32, Float32Builder, Float64, Float64Builder, FloatBuilder, Int, Int16, Int16Builder, Int32, Int32Builder, Int64, Int64Builder, Int8, Int8Builder, IntBuilder, Interval, IntervalBuilder, IntervalDayTime, IntervalDayTimeBuilder, IntervalMonthDayNano, IntervalMonthDayNanoBuilder, IntervalUnit, IntervalYearMonth, IntervalYearMonthBuilder, JSONMessageReader, LargeBinary, LargeBinaryBuilder, LargeList, LargeListBuilder, LargeUtf8, LargeUtf8Builder, List, ListBuilder, MapBuilder, MapRow, Map_, Message, MessageHeader, MessageReader, MetadataVersion, Null, NullBuilder, Precision, RecordBatch, RecordBatchFileReader, RecordBatchFileWriter, RecordBatchJSONWriter, RecordBatchReader, RecordBatchStreamReader, RecordBatchStreamWriter, RecordBatchWriter, Schema, SparseUnion, SparseUnionBuilder, Struct, StructBuilder, StructRow, Table, Time, TimeBuilder, TimeMicrosecond, TimeMicrosecondBuilder, TimeMillisecond, TimeMillisecondBuilder, TimeNanosecond, TimeNanosecondBuilder, TimeSecond, TimeSecondBuilder, TimeUnit, Timestamp, TimestampBuilder, TimestampMicrosecond, TimestampMicrosecondBuilder, TimestampMillisecond, TimestampMillisecondBuilder, TimestampNanosecond, TimestampNanosecondBuilder, TimestampSecond, TimestampSecondBuilder, Type, Uint16, Uint16Builder, Uint32, Uint32Builder, Uint64, Uint64Builder, Uint8, Uint8Builder, Union, UnionBuilder, UnionMode, Utf8, Utf8Builder, Utf8View, Utf8ViewBuilder, Vector, Visitor, builderThroughAsyncIterable, builderThroughIterable, compressionRegistry, isArrowData, isArrowDataType, isArrowField, isArrowRecordBatch, isArrowSchema, isArrowTable, isArrowVector, makeBuilder, makeData, makeTable, makeVector, tableFromArrays, tableFromJSON, tableToIPC, util, vectorFromArray
 
 // EXTERNAL MODULE: ./node_modules/tslib/tslib.js
-var tslib_tslib = __webpack_require__(1860);
+var tslib_tslib = __webpack_require__(61860);
 ;// CONCATENATED MODULE: ./node_modules/tslib/modules/index.js
 
 const {
@@ -6832,7 +6832,7 @@ class Block {
 //# sourceMappingURL=block.mjs.map
 
 // EXTERNAL MODULE: ./node_modules/flatbuffers/js/flatbuffers.js
-var flatbuffers = __webpack_require__(6558);
+var flatbuffers = __webpack_require__(96558);
 ;// CONCATENATED MODULE: ./node_modules/apache-arrow/fb/key-value.mjs
 // automatically generated by the FlatBuffers compiler, do not modify
 
@@ -14887,7 +14887,7 @@ function recordBatchToJSON(records) {
 //# sourceMappingURL=writer.mjs.map
 
 // EXTERNAL MODULE: external "node:stream"
-var external_node_stream_ = __webpack_require__(7075);
+var external_node_stream_ = __webpack_require__(57075);
 ;// CONCATENATED MODULE: ./node_modules/apache-arrow/io/node/iterable.mjs
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
